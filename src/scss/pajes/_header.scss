@@ -1,0 +1,41 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    color: $color-black;
+    text-decoration: none;
+    font-family: 'Dm Sans', Medium;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        margin: 0 27px;
+        list-style: none;
+
+        a {
+            color: $color-black;
+            text-decoration: none;
+                    
+            font-size: 14px;
+            font-weight: 600;
+            //line-height: 150%;
+            font-family: 'Dm Sans', Bald;
+        }
+    }
+}
+
+.btn-green-dark {
+    @include button($color-green-dark, $color-white);
+}

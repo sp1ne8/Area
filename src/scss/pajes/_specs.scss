@@ -1,0 +1,131 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.specs {
+    margin-top: 120px;
+
+    &__line {
+        width: 100%;
+        height: 1px;
+  
+        background-color: $color-gray-dark;
+  
+        margin: 50px 0;
+  
+        align-self: stretch;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+
+        &__name {
+            margin-top: 80px;
+            font-family: 'Roboto Mono', Regular;
+            font-size: 15px;
+            font-weight: 500;
+
+            color: $color-green-dark;
+        }
+
+        &__title {
+            margin: 0;
+            font-size: 70px;
+            font-family: 'Crimson Text', Regular;
+            font-weight: 400;
+            color: $color-black;
+        }
+
+        &__subtitle {
+            margin: 0;
+            font-size: 15px;
+            font-family: 'Dm Sans', Regular;
+            font-weight: 400;
+            color: $paragraph;
+        }
+
+        &__button {
+            @include button($color-green-light, $color-black);
+        }
+    
+    }
+}
+
+
+
+.compare {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+  }
+  
+  .compare__column {
+    transform: translateY(0);
+    cursor: pointer;
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.45s ease,
+      border-radius 0.45s ease,
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+    will-change: transform;
+  
+    h4 {
+      padding: 40px 24px;
+      margin: 0;
+  
+      text-align: center;
+      font-size: 25px;
+      font-weight: 600;
+      font-family: 'Dm Sans', Regular;
+      color: $paragraph;
+  
+      border-bottom: 1px solid #ddd;
+    }
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      padding: 32px 24px;
+
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'Roboto Mono', Regular;
+      color: $color-black;
+  
+      border-bottom: 1px solid #d8d8d8;
+    }
+  
+  }
+
+  .compare__column--active {
+    border-radius: 24px;
+    border: 1px solid #bfc8ad;
+    transform: translateY(-8px);
+    overflow: hidden;
+  
+    background: white;
+  
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+
+    h4 {
+      padding: 40px 24px;
+      margin: 0;
+  
+      text-align: center;
+      font-size: 25px;
+      font-weight: 600;
+      font-family: 'Dm Sans', Medium;
+      color: $color-black;
+  
+      border-bottom: 1px solid #ddd;
+    }
+  }

@@ -1,0 +1,19 @@
+@use './variables' as *;
+
+@mixin button($bg, $color) {
+    background-color: $bg;
+    color: $color;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    
+    padding: 14px 22px;
+    border-radius: 99px;
+  
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Dm Sans', Regular;
+};

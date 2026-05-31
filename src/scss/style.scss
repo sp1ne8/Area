@@ -1,0 +1,16 @@
+@use './base/variables' as *;
+@use './base/mixins' as *;
+
+@use './pajes/header' as *;
+@use './pajes/hero' as *;
+@use './pajes/main' as *;
+@use './pajes/big' as *;
+@use './pajes/specs' as *;
+
+body {
+    padding: 26px 40px;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $color-white;
+}
+
