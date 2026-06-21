@@ -248,14 +248,6 @@
   border-radius: 30px;
 }
 
-.h3 {
-  font-size: 40px;
-  font-family: "Crimson Text", Regular;
-  font-weight: 400;
-  color: #000000;
-  margin-top: 140px;
-}
-
 .specs {
   margin-top: 120px;
 }
@@ -363,6 +355,100 @@
   font-family: "Dm Sans", Medium;
   color: #000000;
   border-bottom: 1px solid #ddd;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  align-items: center;
+}
+.testimonial__image img {
+  width: 80%;
+  display: block;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.testimonial__quote {
+  font-size: 40px;
+  font-family: "Crimson Text", Georgia, serif;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.3;
+  margin: 0 0 50px 0;
+}
+.testimonial__author {
+  display: block;
+  font-family: "Dm Sans", Regular;
+  font-size: 15px;
+  color: #000000;
+  font-style: normal;
+}
+.testimonial__role {
+  font-family: "Dm Sans", Regular;
+  font-size: 12px;
+  color: #485C11;
+  margin: 4px 0 0 0;
+}
+
+.map {
+  padding-bottom: 40px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.map__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 40px;
+}
+.map__title {
+  font-size: 60px;
+  font-family: "Crimson Text", Regular;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+}
+.map__button {
+  background-color: #DFECC6;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 99px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Dm Sans", Regular;
+}
+.map__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.map__list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.map__list__item-number {
+  font-size: 80px;
+  font-family: "Dm Sans", Regular;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
 }
 
 body {

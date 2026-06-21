@@ -1,0 +1,56 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.map {
+    padding-bottom: 40px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-family: 'Crimson Text', Regular;
+        font-weight: 400;
+        color: $color-black;
+        margin: 0;
+    }
+
+    &__button {
+        @include button($color-green-light, $color-black);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+
+        }
+
+        &__item-number {
+            font-size: 80px;
+            font-family: 'Dm Sans', Regular;
+            font-weight: 700;
+            color: $color-black;
+            margin: 0;
+        }
+    }
+}
