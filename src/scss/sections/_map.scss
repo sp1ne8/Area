@@ -1,0 +1,93 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.map {
+    scroll-margin-top: 80px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-family: 'Crimson Text', Regular;
+        font-weight: 400;
+        color: $color-black;
+        margin: 0;
+    }
+
+    &__button {
+        @include button($color-green-light, $color-black, $color-green-dark, $color-white);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        position: relative;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 1px;
+
+            background: #ddd;
+        }
+    }
+
+    &__item-number {
+        font-size: 80px;
+        font-family: 'Dm Sans', Regular;
+        font-weight: 400;
+        color: $color-gray-dark;
+        margin: 0;
+    }
+
+    &__item-title {
+        font-size: 18px;
+        font-family: 'Crimson Text', Regular;
+        font-weight: 300;
+        color: $color-black;
+        margin: 0;
+    }
+
+    &__item-text {
+        font-size: 15px;
+        font-family: 'DM Sans', Regular;
+        font-weight: 300;
+        color: $paragraph;
+        margin: 0;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+
+}

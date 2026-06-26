@@ -2,6 +2,7 @@
 @use '../base/mixins' as *;
 
 .specs {
+  scroll-margin-top: 80px;
   margin-top: 120px;
 
   &__line {
@@ -49,7 +50,7 @@
     }
 
     &__button {
-      @include button($color-green-light, $color-black);
+      @include button($color-green-light, $color-black, $color-green-dark, $color-white);
     }
 
   }

@@ -71,7 +71,7 @@
     }
 
     &__button {
-        @include button($color-green-light, $color-black);
+        @include button($color-green-light, $color-black, $color-green-dark, $color-white);
         margin-top: 60px;
     }
 

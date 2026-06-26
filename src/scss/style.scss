@@ -1,17 +1,23 @@
 @use './base/variables' as *;
 @use './base/mixins' as *;
 
-@use './pajes/header' as *;
-@use './pajes/hero' as *;
-@use './pajes/main' as *;
-@use './pajes/big' as *;
-@use './pajes/specs' as *;
-@use './pajes/testimonial' as *;
-@use './pajes/map' as *;
+@use './sections/header' as *;
+@use './sections/hero' as *;
+@use './sections/main' as *;
+@use './sections/big' as *;
+@use './sections/specs' as *;
+@use './sections/testimonial' as *;
+@use './sections/map' as *;
+@use './sections/connect' as *;
+@use './sections/footer' as *;
 
 body {
     padding: 26px 40px;
     margin: 0;
     box-sizing: border-box;
     background-color: $color-white;
+}
+
+html {
+    scroll-behavior: smooth;
 }
