@@ -1,3 +1,24 @@
+// Burger menu
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+
+if (burger && menu) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  });
+
+  // Закрытие меню при клике на ссылку
+  menu.querySelectorAll('.menu__item a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active');
+      menu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
 const columns = document.querySelectorAll('.compare__column');
 
 columns.forEach(column => {
@@ -57,6 +78,13 @@ window.addEventListener('scroll', () => {
 
       parallaxElements.forEach(({ el, speed, base }) => {
         if (!el) return;
+
+        // Отключаем параллакс на мобильных и планшетах (экран < 1024px)
+        if (window.innerWidth < 1299) {
+          el.style.transform = ''; // Сбрасываем трансформацию в исходное положение
+          return;
+        }
+
         const rect = el.getBoundingClientRect();
         const inView = rect.top < window.innerHeight && rect.bottom > 0;
 
@@ -72,4 +100,3 @@ window.addEventListener('scroll', () => {
     ticking = true;
   }
 });
-

@@ -37,6 +37,14 @@
         list-style: none;
         padding: 0;
         margin-bottom: 100px;
+
+        @include respond-to('sm') {
+            display: flex;
+            overflow-x: auto;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 20px;
+        }
     }
 
     &__item {
@@ -45,6 +53,12 @@
         align-items: start;
         gap: 20px;
         position: relative;
+
+        @include respond-to('sm') {
+            flex: 0 0 50%;
+            scroll-snap-align: start;
+        }
+
 
         &::before {
             content: '';
@@ -87,6 +101,14 @@
     &__image {
         width: 100%;
         border-radius: 30px;
+
+        @include respond-to('lg') {
+            content: url(../assets/image-1.png);
+        }
+
+        @include respond-to('sm') {
+            content: url(../assets/image-2.png);
+        }
     }
 
 

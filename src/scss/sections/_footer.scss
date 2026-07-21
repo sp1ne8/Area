@@ -11,6 +11,10 @@
         list-style: none;
         padding: 0;
         margin: 0 0 60px 0;
+
+        @include respond-to('sm') {
+            flex-direction: column;
+        }
     }
 
     &__link {
